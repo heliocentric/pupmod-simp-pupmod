@@ -1,3 +1,4 @@
+# vim: set expandtab ts=2 sw=2:
 require 'puppetlabs_spec_helper/module_spec_helper'
 require 'rspec-puppet'
 require 'simp/rspec-puppet-facts'
@@ -142,6 +143,9 @@ RSpec.configure do |c|
     # clean up the mocked environmentpath
     FileUtils.rm_rf(@spec_global_env_temp)
     @spec_global_env_temp = nil
+  end
+  c.after(:suite) do
+#    RSpec::Puppet::Coverage.report!(100)
   end
 end
 

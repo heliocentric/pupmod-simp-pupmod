@@ -22,7 +22,6 @@ define pupmod::conf (
   Scalar $value,
   String $section = 'main'
 ) {
-  include '::pupmod'
 
   $l_name = "${module_name}_${name}"
 

@@ -32,5 +32,8 @@ fixtures:
     simpcat: https://github.com/simp/pupmod-simp-simpcat
     simplib: https://github.com/simp/pupmod-simp-simplib
     stdlib: https://github.com/simp/puppetlabs-stdlib
+    puppet_enterprise:
+      repo: https://github.com/heliocentric/pupmod-mock-puppet_enterprise
+      branch: develop
   symlinks:
     pupmod: "#{source_dir}"
