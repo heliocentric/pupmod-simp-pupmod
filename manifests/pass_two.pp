@@ -9,7 +9,13 @@ define pupmod::pass_two (
   $pupmod_ca_port = 8141,
   $pupmod_report = false,
   $pupmod_masterport = 8140,
+  $debug = false
 ) {
+  $pe_classlist.each |String $class, Hash $data| {
+    $class_defined = defined(Class[$class])
+    notify { "${class} = ${class_defined}": }
+  }
+
   if (defined(Class['puppet_enterprise'])) {
     $_server_distribution = 'PE'
   } else {

@@ -256,7 +256,9 @@ class pupmod (
       pupmod_ca_port      => $ca_port,
       pupmod_report       => $report,
     }
+    notify { "before pass_two resource collection": }
     Pupmod::Pass_two <| |>
+    notify { "after pass_two resource collection": }
 
     pupmod::conf { 'splay':
       confdir => $confdir,
